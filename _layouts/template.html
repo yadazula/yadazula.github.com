@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    {% if page.title %}
+    <title>{{ page.title }} &mdash; {{ site.title }}</title>
+    {% else %}
+    <title>{{ site.title }}</title>
+    {% endif %}
+    {% assign description = site.description %}
+    {% if page.description %}
+        {% assign description = page.description %}
+    {% endif %}
+    <meta name="description" content="{{ description }}" />
+    {% assign keywords = site.keywords %}
+    {% if page.keywords %}
+        {% assign keywords = page.keywords %}
+    {% endif %}
+    <meta name="keywords" content="{{ keywords | join: "," }}" />
+    <meta name="author" content="{{ site.author.name }}" />
+    <link rel="alternate" type="application/atom+xml" title="{{ site.author.name }}" href="/feed.xml">
+    <link href="{{ site.author.openid.server }}" rel="openid2.provider" />
+    <link href="{{ site.author.openid.delegate }}" rel="openid2.local_id" />
+    <link href="{{ site.author.openid.server }}" rel="openid.server" />
+    <link href="{{ site.author.openid.delegate }}" rel="openid.delegate" />
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/assets/themes/default/images/favicon.ico" />
+    <link rel="icon" type="image/png" href="/assets/themes/default/images/favicon.png" />
+    <link rel="apple-touch-icon" href="/assets/themes/default/images/ios.png"/>    
+    <meta name="viewport" content="width=800" />    
+    {% for stylesheet in site.stylesheets %}
+    <link rel="stylesheet" href="{{ stylesheet }}" media="screen" />            
+    {% endfor %}
+    {% for stylesheet in page.stylesheets %}
+    <link rel="stylesheet" href="{{ stylesheet }}" media="screen" />            
+    {% endfor %}    
+    <!--[if IE]>
+    <script src="/assets/themes/default/js/html5.js"></script>
+    <![endif]-->    
+    {% for script in site.scripts %}
+    <script src="{{ script }}" type="text/javascript"></script>
+    {% endfor %}
+    {% for script in page.scripts %}
+    <script src="{{ script }}" type="text/javascript"></script>
+    {% endfor %}    
+</head>
+<body class="{{ page.bodyclass }}">
+<div id="wrapper">
+<div id="inner_wrapper">    
+    <div id="container">          
+        <nav id="main_nav">
+            <ul>
+				<li><a href="/blog/" class="blog">blog</a></li>
+				<li><a href="/about/" class="about">about</a></li>
+            </ul>
+        </nav>        
+        <div id="content">
+        {{ content }}
+        </div>        
+    </div>    
+    <div id="footer-wrapper">
+        <footer>
+            <section title="Colophon" class="colophon" itemscope itemtype="http://data-vocabulary.org/Person">
+                <h1>Explain Yourself</h1>
+                <p><span itemprop="name">Gokhan Demir</span> is a <span itemprop="role">software developer</span> from <span itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address"><span itemprop="locality">Istanbul</span></span>.  <a href="/about/" title="More about Gokhan">Read on.</a></p>
+                <p>Also,</p>
+                <nav>
+                    <ul>
+                        <li class="hide"><a itemprop="url" href="/" title="You are Here">Site</a></li>
+                        <li><a href="{{ site.author.twitter }}" title="Twitter">Twitter</a></li>
+                        <li><a href="{{ site.author.github }}" title="Github">Github</a></li>
+                        <li><a href="{{ site.author.linkedin }}" title="LinkedIn">LinkedIn</a></li>
+						<li><a href="{{ site.author.facebook }}" title="Facebook">Facebook</a></li>
+                        <li><a href="mailto:{{ site.author.email }}" title="Email">Email</a></li>
+                        <li><a href="/feed.xml" title="RSS">RSS</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section title="Post Categories" class="category">
+                <h1>Post Categories</h1>
+				<nav>
+                    <ul>
+					{% for category in site.categories %} 
+						<li><a href="{{ category[0] }}" title="{{ category[0] }}">{{ category[0] }} ({{ category[1].size }})</a></li>
+					{% endfor %}
+					</ul>
+                </nav>
+            </section>
+            <section title="Twitter Stream" class="twitter">
+                <h1><a href="{{ site.author.twitter }}" title="Twitter Stream">@yadazula</a></h1>
+                <nav></nav>
+            </section>
+            <section title="Copyright" class="attribution">
+                <p>Copyright &copy; {{ site.time | date: "%Y" }} {{ site.author.name }}.  Powered by <a href="https://github.com/mojombo/jekyll" title="Jekyll">Jekyll</a>.  Theme based on <a href="https://github.com/mmonteleone/michaelmonteleone.net" title="theme">mmonteleone</a>.</p>
+            </section>
+        </footer>
+        <div style="clear:both"></div>
+    </div>    
+</div>
+</div>
+{% include analytic.html %}
+</body>
+</html>
