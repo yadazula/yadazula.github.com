@@ -4,6 +4,7 @@ tags:  []
 categories: [aws, s3]
 layout: post
 description: Introducing S3Emulator
+keywords: s3emulator, s3 emulator, testing s3, mocking s3
 comments: true
 ---
 
