@@ -9,7 +9,7 @@ permalink: /about/index.html
 
 Welcome, my name is Gokhan Demir a software developer from Istanbul, Turkey. I have a big passion for software development. 
 I try to write code for other developers, [not the computers.][Code_Write_Link] 
-I like to simply complicated problems and try to follow [KISS][KISS_Link], [DRY][DRY_Link], [YAGNI][YAGNI_Link] and [SOLID][SOLID_Link] principles. 
+I like to simplify complicated problems and try to follow [KISS][KISS_Link], [DRY][DRY_Link], [YAGNI][YAGNI_Link] and [SOLID][SOLID_Link] principles. 
 
 ## What does yadazula means ?
 
