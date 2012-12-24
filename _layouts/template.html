@@ -75,16 +75,6 @@
                     </ul>
                 </nav>
             </section>
-            <section title="Post Categories" class="category">
-                <h1>Post Categories</h1>
-				<nav>
-                    <ul>
-					{% for category in site.categories %} 
-						<li><a href="{{ category[0] }}" title="{{ category[0] }}">{{ category[0] }} ({{ category[1].size }})</a></li>
-					{% endfor %}
-					</ul>
-                </nav>
-            </section>
             <section title="Twitter Stream" class="twitter">
                 <h1><a href="{{ site.author.twitter }}" title="Twitter Stream">@yadazula</a></h1>
                 <nav></nav>
