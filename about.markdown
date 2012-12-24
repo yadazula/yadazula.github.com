@@ -11,12 +11,6 @@ Welcome, my name is Gokhan Demir a software developer from Istanbul, Turkey. I h
 I try to write code for other developers, [not the computers.][Code_Write_Link] 
 I like to simplify complicated problems and try to follow [KISS][KISS_Link], [DRY][DRY_Link], [YAGNI][YAGNI_Link] and [SOLID][SOLID_Link] principles. 
 
-## What does yadazula means ?
-
-Unfortunately I have very common name. There are lots of people have the same name [as me.][Linkedin_Gokhan] 
-So I need to choose another nick. When in high school summer camp, we participated a soccer tournament and 
-the name of our team was yadazula which in fact a made-up word. That's story of this strange word. (btw, yes we won the cup !)
-
 Other streams you can find more about me :
 
 * [Twitter]({{ site.author.twitter }})
